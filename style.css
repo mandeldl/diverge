@@ -58,7 +58,7 @@ a:hover {
   opacity: .5; 
 }
 
-#maintext button { 
+button { 
   display: block;
   width: 35px;
   height: 35px;
@@ -73,8 +73,12 @@ a:hover {
   transition: .3s background;
 }
 
-#maintext button:hover { 
+button:hover { 
    background: rgba(0,0,0,0.5);
+}
+
+button:focus {
+  outline: none;
 }
 
 @media screen and (max-width: 500px) { 
@@ -87,7 +91,7 @@ a:hover {
   body { background: url("assets/FlowerPoster.png") #000 no-repeat center center fixed; 
   background-size: cover; 
 }
-  #bgvid, #maintext button { 
+  #bgvid, button { 
     display: none; 
   }
   div{
