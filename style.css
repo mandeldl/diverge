@@ -60,14 +60,14 @@ a:hover {
 
 #maintext button { 
   display: block;
-  width: 80%;
-  padding: .4rem;
+  width: 35px;
+  height: 35px;
   border: none; 
   margin: 1rem auto; 
   font-size: 1.3rem;
   background: rgba(255,255,255,0.23);
   color: #fff;
-  border-radius: 3px; 
+  border-radius: 50%; 
   cursor: pointer;
   -webkit-transition: .3s background;
   transition: .3s background;
