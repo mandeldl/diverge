@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html lang=en>
+<head>
+<title>the new code - FullScreen HTML5 Video In Pure CSS</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<meta charset=utf-8>
+</head>
+<body>
+<video autoplay loop poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid">
+<source src="../assets/videos/polina.webm" type="video/webm">
+<source src="../assets/videos/polina.mp4" type="video/mp4">
+</video> 
+<div id="polina">
+<h1>Polina</h1>
+<p>filmed by Alexander Wagner 2011
+<p><a href="/777/Create-Fullscreen-HTML5-Page-Background-Video">return to article</a>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor.
+<p>Aenean pharetra convallis pellentesque. Vestibulum et metus lectus. Nunc consectetur, ipsum in viverra eleifend, erat erat ultricies felis, at ultricies mi massa eu ligula. Suspendisse in justo dapibus metus sollicitudin ultrices id sed nisl.</p>
+<button>Pause</button>
+</div>
+<script>
+var video = document.getElementById("bgvid"),
+pauseButton = document.querySelector("#polina button");
+
+function vidFade() {
+  video.classList.add("stopfade");
+}
+
+video.addEventListener('ended', function()
+{
+// only functional if "loop" is removed 
+video.pause();
+vidFade();
+}, false); 
+ 
+pauseButton.addEventListener("click", function() {
+  video.classList.toggle("stopfade");
+  if (video.paused) {
+    video.play();
+    pauseButton.innerHTML = "Pause";
+  } else {
+    video.pause();
+    pauseButton.innerHTML = "Paused";
+  }
+}, false);
+
+video.addEventListener('touchstart', function(e) {
+e.preventDefault();
+video.play();
+})
+</script>
+
+</body>
+</html>
