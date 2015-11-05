@@ -1,3 +1,5 @@
+// Video on Landing Page:
+
 var video = document.getElementById("bgvid"),
 pauseButton = document.querySelector("button");
 
@@ -27,10 +29,14 @@ video.addEventListener('touchstart', function(e) {
   video.play();
 })
 
-// NAV BUTTON
+// NAV/Hamburger menu
 
 $( "#nav-toggle" )
   .on( "click", function() {
     $(this).toggleClass( "active" );
     $("ul.menubar").slideToggle();
   });
+
+$.get('filmmakers.html', function(data) {
+  console.log(data);
+});
