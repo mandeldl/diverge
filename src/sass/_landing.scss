@@ -7,11 +7,9 @@ video {
   width: auto;
   height: auto;
   z-index: -100;
-  -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   background: url('assets/FlowerPoster.png') no-repeat; 
   background-size: cover;  
-  -webkit-transition: 1s opacity; 
   transition: 1s opacity; 
 }
 
@@ -24,7 +22,8 @@ video {
   width: calc(100% - 8rem);
   margin: 2rem; 
   float: right; 
-  font-size: 1.2rem; 
+  font-size: 1.2rem;
+  text-align: justify;
   @media screen and (max-width: 800px) { 
     width:70%;
   }
@@ -47,7 +46,6 @@ a {
   background: rgba(0,0,0,0.5); 
   padding: .5rem; 
   transition: .6s background; 
-  -webkit-transition: .6s background;
 }
 
 a:hover { 
@@ -69,7 +67,6 @@ button {
   color: #fff;
   border-radius: 50%; 
   cursor: pointer;
-  -webkit-transition: .3s background;
   transition: .3s background;
   &:hover {
     background: rgba(0,0,0,0.5);
@@ -86,7 +83,4 @@ button {
   #bgvid, button { 
     display: none; 
   }
-  div{
-    width:70%;
-  } 
 }
