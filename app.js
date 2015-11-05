@@ -26,3 +26,11 @@ video.addEventListener('touchstart', function(e) {
   e.preventDefault();
   video.play();
 })
+
+// NAV BUTTON
+
+document.querySelector( "#nav-toggle" )
+  .addEventListener( "click", function() {
+    this.classList.toggle( "active" );
+    document.querySelector("ul.menubar").classList.toggle( "active" );
+  });

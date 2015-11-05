@@ -1,0 +1,68 @@
+// HAMBURGER MENU:
+
+nav {
+  position: relative;
+}
+
+#nav-toggle { 
+  position: relative; 
+  left: 5px; 
+  top: 5px;
+  background: none;
+  cursor: pointer; 
+  padding: 10px 35px 16px 0px;
+  @media all and (min-width: 500px) {
+    display: none;
+  }
+  span,
+  span:after,
+  span:before {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: white;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 500ms ease-in-out;
+  }
+  span:before {
+    top: -10px; 
+  }
+  span:after {
+    bottom: -10px;
+  }
+}
+
+#nav-toggle.active {
+  span {
+    background-color: transparent;
+  }
+  span:before, 
+  span:after {
+    top: 0;
+  }
+  span:before {
+    transform: rotate(360deg);
+    transform-origin: 0 0 0;
+  }
+  span:after {
+    transform: rotate(-360deg);
+    transform-origin: 100% 100% 0;
+  }
+}
+
+// MENU ITEMS:
+
+ul.menubar {
+  display: none;
+  list-style: none;
+  background-color: #FFF;
+  margin: 0;
+  text-align: center;
+  padding: 10px 0;
+  &.active {
+    display: block;
+  }
+}

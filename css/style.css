@@ -353,21 +353,6 @@ td,
 th {
   padding: 0; }
 
-video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
-  background: url("assets/FlowerPoster.png") no-repeat;
-  background-size: cover;
-  transition: 1s opacity; }
-
 .maintext {
   font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
   font-weight: 100;
@@ -403,6 +388,80 @@ a {
 a:hover {
   background: rgba(0, 0, 0, 0.9); }
 
+nav {
+  position: relative; }
+
+#nav-toggle {
+  position: relative;
+  left: 5px;
+  top: 5px;
+  background: none;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px; }
+  @media all and (min-width: 500px) {
+    #nav-toggle {
+      display: none; } }
+  #nav-toggle span,
+  #nav-toggle span:after,
+  #nav-toggle span:before {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: white;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 500ms ease-in-out; }
+  #nav-toggle span:before {
+    top: -10px; }
+  #nav-toggle span:after {
+    bottom: -10px; }
+
+#nav-toggle.active span {
+  background-color: transparent; }
+
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+  top: 0; }
+
+#nav-toggle.active span:before {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transform-origin: 0 0 0;
+          transform-origin: 0 0 0; }
+
+#nav-toggle.active span:after {
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+  -webkit-transform-origin: 100% 100% 0;
+          transform-origin: 100% 100% 0; }
+
+ul.menubar {
+  display: none;
+  list-style: none;
+  background-color: #FFF;
+  margin: 0;
+  text-align: center;
+  padding: 10px 0; }
+  ul.menubar.active {
+    display: block; }
+
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  background: url("assets/FlowerPoster.png") no-repeat;
+  background-size: cover;
+  transition: 1s opacity; }
+
 .stopfade {
   opacity: .5; }
 
@@ -434,3 +493,7 @@ button {
   background-image: url("../assets/TheFilmmakers.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
+
+#filmmakers {
+  height: 80vh;
+  overflow: scroll; }
