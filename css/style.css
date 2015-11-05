@@ -353,10 +353,6 @@ td,
 th {
   padding: 0; }
 
-body {
-  margin: 0;
-  background: #000; }
-
 video {
   position: fixed;
   top: 50%;
@@ -373,17 +369,22 @@ video {
   -webkit-transition: 1s opacity;
   transition: 1s opacity; }
 
-div {
+.maintext {
   font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
   font-weight: 100;
   background: rgba(0, 0, 0, 0.3);
   color: white;
   padding: 2rem;
   width: calc(100% - 8rem);
-  /*width: 33%; */
   margin: 2rem;
   float: right;
   font-size: 1.2rem; }
+  @media screen and (max-width: 800px) {
+    .maintext {
+      width: 70%; } }
+  @media screen and (min-width: 1100px) {
+    .maintext {
+      width: 33%; } }
 
 h1 {
   font-size: 3rem;
@@ -397,8 +398,8 @@ a {
   text-decoration: none;
   background: rgba(0, 0, 0, 0.5);
   padding: .5rem;
-  -webkit-transition: .6s background;
-  transition: .6s background; }
+  transition: .6s background;
+  -webkit-transition: .6s background; }
 
 a:hover {
   background: rgba(0, 0, 0, 0.9); }
@@ -419,16 +420,10 @@ button {
   cursor: pointer;
   -webkit-transition: .3s background;
   transition: .3s background; }
-
-button:hover {
-  background: rgba(0, 0, 0, 0.5); }
-
-button:focus {
-  outline: none; }
-
-@media screen and (min-width: 1100px) {
-  div {
-    width: 33%; } }
+  button:hover {
+    background: rgba(0, 0, 0, 0.5); }
+  button:focus {
+    outline: none; }
 
 @media all and (max-device-width: 800px) {
   body {
@@ -438,3 +433,6 @@ button:focus {
     display: none; }
   div {
     width: 70%; } }
+
+.filmmakers {
+  background-image: url("../assets/TheFilmmakers.jpg"); }

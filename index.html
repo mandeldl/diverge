@@ -2,15 +2,15 @@
 <html lang=en>
 <head>
   <title>DIVERGE - A film by James Morrison</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
   <meta charset=utf-8>
 </head>
-<body>
+<body class="landing">
   <video autoplay loop poster="assets/FlowerPoster.png" id="bgvid">
-  <!-- <source src="assets/FlowerInTheWaterCopy5.webm" type="video/webm"> -->
-  <source src="assets/FlowerInTheWaterCopy5.mp4" type="video/mp4">
+    <!-- <source src="assets/FlowerInTheWaterCopy5.webm" type="video/webm"> -->
+    <source src="assets/FlowerInTheWaterCopy5.mp4" type="video/mp4">
   </video> 
-  <div id="maintext">
+  <div id="maintext" class="maintext">
     <h1>DIVERGE</h1>
     <p>a film by James Morrison</p>
     <p>DIVERGE is the first production from Brooklyn based production house, Young Gunner Films, one of eight teams chosen from a pool of over two hundred to participate in the inaugural Dogfish Accelerator - the first incubator program for independent film companies.</p>
@@ -24,37 +24,6 @@
     <p>The Diverge Team</p>
     <button>II</button>
   </div>
-  <script>
-    var video = document.getElementById("bgvid"),
-    pauseButton = document.querySelector("button");
-
-    function vidFade() {
-      video.classList.add("stopfade");
-    }
-
-    video.addEventListener('ended', function()
-    {
-    // only functional if "loop" is removed 
-    video.pause();
-    vidFade();
-    }, false); 
-     
-    pauseButton.addEventListener("click", function() {
-      video.classList.toggle("stopfade");
-      if (video.paused) {
-        video.play();
-        pauseButton.innerHTML = "II";
-      } else {
-        video.pause();
-        pauseButton.innerHTML = "&#9655;";
-      }
-    }, false);
-
-    video.addEventListener('touchstart', function(e) {
-    e.preventDefault();
-    video.play();
-    })
-  </script>
-
+  <script src="app.js"></script>
 </body>
 </html>
