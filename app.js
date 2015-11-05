@@ -29,8 +29,8 @@ video.addEventListener('touchstart', function(e) {
 
 // NAV BUTTON
 
-document.querySelector( "#nav-toggle" )
-  .addEventListener( "click", function() {
-    this.classList.toggle( "active" );
-    document.querySelector("ul.menubar").classList.toggle( "active" );
+$( "#nav-toggle" )
+  .on( "click", function() {
+    $(this).toggleClass( "active" );
+    $("ul.menubar").slideToggle();
   });
