@@ -2,6 +2,7 @@
 
 nav {
   position: relative;
+  margin: 0 0 8px;
 }
 
 #nav-toggle { 
@@ -72,9 +73,11 @@ ul.menubar {
     background: rgba(0,0,0,0.5);
   }
   li {
+    text-transform: uppercase;
+    padding: 10px 0;
+    cursor: pointer;
     @media all and (min-width: 500px) {
       display: inline-block;
-      cursor: pointer;
       padding: 0 5px;
       color: white;
       &:hover {
