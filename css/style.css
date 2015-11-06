@@ -387,9 +387,8 @@ a {
   background: rgba(0, 0, 0, 0.5);
   padding: .5rem;
   transition: .6s background; }
-
-a:hover {
-  background: rgba(0, 0, 0, 0.9); }
+  a:hover {
+    background: rgba(0, 0, 0, 0.9); }
 
 nav {
   position: relative;
