@@ -446,6 +446,27 @@ ul.menubar {
   padding: 10px 0; }
   ul.menubar.active {
     display: block; }
+  @media all and (min-width: 500px) {
+    ul.menubar {
+      display: block;
+      position: fixed;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5); } }
+  @media all and (min-width: 500px) {
+    ul.menubar li {
+      display: inline-block;
+      cursor: pointer;
+      padding: 0 5px;
+      color: white; }
+      ul.menubar li:hover {
+        color: rgba(255, 255, 255, 0.5); }
+      ul.menubar li.selected::after {
+        content: "";
+        display: block;
+        background-color: black;
+        height: 2px;
+        width: 58%;
+        margin: 3px auto; } }
 
 video {
   position: fixed;
