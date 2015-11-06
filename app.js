@@ -33,13 +33,16 @@ video.addEventListener('touchstart', function(e) {
 
 $( "#nav-toggle" )
   .on( "click", function() {
-    $(this).toggleClass( "active" );
+    $(this).toggleClass("active");
     $("ul.menubar").slideToggle();
   });
 
   $('li').click(function () {
     $('li').removeClass('selected');
     $(this).toggleClass('selected');
+    if ($('#nav-toggle').css('display') != 'none') {
+      $( "#nav-toggle" ).trigger('click');
+    };
     var page = $(this).data('link');
     var url = page + ".html";
     $.get(url, function(data) {
