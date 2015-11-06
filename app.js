@@ -40,7 +40,9 @@ $( "#nav-toggle" )
   $('li').click(function () {
     $('li').removeClass('selected');
     $(this).toggleClass('selected');
-    $( "#nav-toggle" ).trigger('click');
+    if ($('#nav-toggle').css('display') != 'none') {
+      $( "#nav-toggle" ).trigger('click');
+    };
     var page = $(this).data('link');
     var url = page + ".html";
     $.get(url, function(data) {
