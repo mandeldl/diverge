@@ -1,7 +1,7 @@
 // Video on Landing Page:
 
 var video = document.getElementById("bgvid"),
-pauseButton = document.querySelector("button");
+pauseButton = document.getElementById("pausePlay");
 
 function vidFade() {
   video.classList.add("stopfade");
@@ -37,6 +37,11 @@ $( "#nav-toggle" )
     $("ul.menubar").slideToggle();
   });
 
-$.get('filmmakers.html', function(data) {
-  console.log(data);
-});
+  $('li').click(function () {
+    var page = $(this).data('link');
+    var url = page + ".html";
+    $.get(url, function(data) {
+      $('body').removeClass().addClass(page);
+      $('.container').html(data);
+    });
+  })
