@@ -51,3 +51,42 @@ $('li').click(function () {
     $('.container').html(data);
   });
 });
+
+
+
+// REFACTOR FROM CODEPEN:
+// $('button#clone').click(function() {
+//   $('div.box').first().clone().appendTo('.box').addClass("clone");
+// });
+
+// $('button#clear').click(function() {
+//   $('.clone').remove();
+// });
+
+// $('button#spread').click(function() {
+//   setTimeout(function() {
+//     // Code for click event
+//     blah();
+//     // this code will run after the duration elaspes
+//   }, 500);
+// });
+
+// $('button#fade').click(function() {
+//   // $('.box').fadeOut({
+//   //   duration: 'slow',
+//   //   easing: 'linear',
+//   //   queue: false
+//   // }).animate({'transform': 'translateX(-200px)'}, {queue: false}); 
+// $('.box').animate({'left': '-=100px'}, {queue: false}).fadeOut({
+//     done: function(){
+//       $('.container').prepend('<div class="box"></div>'); 
+//     }});
+// });
+
+// function blah() {
+//   $('.box').fadeOut({
+//     duration: 1000,
+//     easing: 'linear',
+//     progress: $('.box').addClass('transform')
+//   });
+// }
