@@ -353,6 +353,12 @@ td,
 th {
   padding: 0; }
 
+html {
+  /* Safari/Chrome, other WebKit */
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */ }
+
 body {
   background-color: black;
   background-size: cover;
@@ -360,9 +366,9 @@ body {
 
 .container {
   padding-top: 25px; }
-  @media screen and (min-width: 760px) {
+  @media screen and (min-width: 500px) {
     .container {
-      padding-top: 50px; } }
+      padding-top: 53px; } }
 
 .maintext {
   width: calc(100% - 2rem);
@@ -472,7 +478,7 @@ ul.menubar {
     text-transform: uppercase;
     padding: 10px 0;
     cursor: pointer;
-    margin-bottom: 3px; }
+    margin-bottom: 5px; }
     @media all and (min-width: 500px) {
       ul.menubar li {
         display: inline-block;
@@ -531,11 +537,6 @@ button {
     background-size: cover; }
   #bgvid, button {
     display: none; } }
-
-.filmmakers {
-  background-image: url("../assets/TheFilmmakers.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; }
 
 #filmmakers {
   height: 80vh;

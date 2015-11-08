@@ -1,3 +1,9 @@
+html {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
 body {
   background-color: black;
   background-size: cover;
@@ -6,8 +12,8 @@ body {
 
 .container {
   padding-top: 25px;
-  @media screen and (min-width: 760px) { 
-    padding-top: 50px;
+  @media screen and (min-width: 500px) { 
+    padding-top: 53px;
   }
 }
 
