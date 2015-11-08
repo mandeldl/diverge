@@ -357,7 +357,8 @@ html {
   /* Safari/Chrome, other WebKit */
   /* Firefox, other Gecko */
   box-sizing: border-box;
-  /* Opera/IE 8+ */ }
+  /* Opera/IE 8+ */
+  font-family: 'Cinzel', serif; }
 
 body {
   background-color: black;
@@ -374,7 +375,6 @@ body {
   width: calc(100% - 2rem);
   padding: 1rem;
   margin: 0;
-  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
   font-weight: 100;
   background: rgba(0, 0, 0, 0.3);
   color: white;
@@ -395,7 +395,8 @@ h1 {
   font-size: 3rem;
   text-transform: uppercase;
   margin-top: 0;
-  letter-spacing: .3rem; }
+  letter-spacing: .3rem;
+  font-weight: 400; }
 
 a {
   display: inline-block;
