@@ -1,3 +1,16 @@
+body {
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  padding-top: 25px;
+  @media screen and (min-width: 760px) { 
+    padding-top: 50px;
+  }
+}
+
 .maintext { 
   width: calc(100% - 2rem);
   padding: 1rem;

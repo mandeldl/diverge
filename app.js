@@ -29,24 +29,25 @@ video.addEventListener('touchstart', function(e) {
   video.play();
 })
 
-// NAV/Hamburger menu
+// NAV/Hamburger menu (mobile)
 
-$( "#nav-toggle" )
-  .on( "click", function() {
+$( "#nav-toggle" ).on( "click", function() {
     $(this).toggleClass("active");
     $("ul.menubar").slideToggle();
   });
 
-  $('li').click(function () {
-    $('li').removeClass('selected');
-    $(this).toggleClass('selected');
-    if ($('#nav-toggle').css('display') != 'none') {
-      $( "#nav-toggle" ).trigger('click');
-    };
-    var page = $(this).data('link');
-    var url = page + ".html";
-    $.get(url, function(data) {
-      $('body').removeClass().addClass(page);
-      $('.container').html(data);
-    });
-  })
+// menubar styling
+$('li').click(function () {
+  $('li').removeClass('selected');
+  $(this).toggleClass('selected');
+  if ($('#nav-toggle').css('display') != 'none') { //Only do this if the hamburger menu is visbile, i.e, mobile:
+    $( "#nav-toggle" ).trigger('click');
+  };
+  // Change page
+  var page = $(this).data('link');
+  var url = page + ".html";
+  $.get(url, function(data) {
+    $('body').removeClass().addClass(page);
+    $('.container').html(data);
+  });
+});
