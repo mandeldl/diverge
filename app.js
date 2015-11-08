@@ -46,12 +46,21 @@ $('li').click(function () {
   // Change page
   var page = $(this).data('link');
   var url = page + ".html";
-  $.get(url, function(data) {
-    $('body').removeClass().addClass(page);
-    $('.container').html(data);
+  $(".container > div").addClass('animated fadeOutDown').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    $.get(url, function(data) {
+      $('body').removeClass().addClass(page);
+      $('.container').html(data);
+    });
+    // $(this).remove();
   });
 });
 
+$("#test").click(function () {
+  $(".container > div").addClass('animated fadeOutDown').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    $(this).remove();
+  });
+
+});
 
 
 // REFACTOR FROM CODEPEN:
