@@ -2707,9 +2707,14 @@ body {
     .maintext {
       text-align: justify;
       padding: 2rem;
-      margin: 2rem;
-      float: right;
-      width: calc(70% - 8rem); } }
+      margin: 2rem auto;
+      width: calc(70% - 8rem);
+      max-height: 80vh;
+      overflow: scroll; }
+      .cast .maintext {
+        padding: 2rem;
+        margin: 2rem;
+        float: left; } }
   @media screen and (min-width: 1100px) {
     .maintext {
       width: 33%; } }
@@ -2719,7 +2724,8 @@ h1 {
   text-transform: uppercase;
   margin-top: 0;
   letter-spacing: .3rem;
-  font-weight: 400; }
+  font-weight: 400;
+  text-align: center; }
 
 a {
   display: inline-block;
